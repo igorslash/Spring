@@ -1,0 +1,12 @@
+<changeSet id="004" author="dev">
+    <insert tableName="users">
+        <column name="email" value="admin@example.com"/>
+        <column name="password" value="$2a$10$yourbcryptadminhash"/> <!-- bcrypt for admin123 -->
+        <column name="role" value="ADMIN"/>
+    </insert>
+    <insert tableName="users">
+        <column name="email" value="user@example.com"/>
+        <column name="password" value="$2a$10$yourbcryptuserhash"/> <!-- bcrypt for user123 -->
+        <column name="role" value="USER"/>
+    </insert>
+</changeSet>
